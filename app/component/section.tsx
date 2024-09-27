@@ -24,7 +24,7 @@ const Section = ({title, description, previewContent, htmlContent}: SectionProps
                 <TabsContent value="preview" className="p-4 bg-gray-100 rounded-md">
                     {previewContent}
                 </TabsContent>
-                {htmlContents.map( (html) => <TabsContent value="html" className="relative">
+                {htmlContents.map( (html, index) => <TabsContent key={index} value="html" className="relative">
                     <pre className="language-html text-sm p-4 rounded-lg bg-gray-800 text-gray-50">
                         <code>{html}</code>
                     </pre>
