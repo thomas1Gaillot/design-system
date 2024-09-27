@@ -21,10 +21,13 @@ const Section = ({title, description, previewContent, htmlContent}: SectionProps
                     <TabsTrigger value="preview">Preview</TabsTrigger>
                     <TabsTrigger value="html">HTML</TabsTrigger>
                 </TabsList>
-                <TabsContent value="preview" className="p-4 bg-gray-100 rounded-md">
-                    {previewContent}
+                <TabsContent value="preview">
+                    <div
+                        className="flex flex-wrap gap-4 items-center justify-center py-20 px-1 border border-gray-200 bg-white rounded-md">
+                        {previewContent}
+                    </div>
                 </TabsContent>
-                {htmlContents.map( (html, index) => <TabsContent key={index} value="html" className="relative">
+                {htmlContents.map((html, index) => <TabsContent key={index} value="html" className="relative">
                     <pre className="language-html text-sm p-4 rounded-lg bg-gray-800 text-gray-50">
                         <code>{html}</code>
                     </pre>
