@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import {
-    BadgeIcon, BinaryIcon,
+    BadgeIcon, BellIcon, BinaryIcon,
     BookTypeIcon,
     ContainerIcon,
     ImageIcon,
@@ -129,7 +129,15 @@ export default function ComponentsSideBarContent() {
                         )}>Input OTP</span>
                     </Link>
                 </li>
-
+                <li>
+                    <Link href="/component/ping"
+                          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
+                        <BellIcon className="h-4 w-4 text-green-500"/>
+                        <span className={cn("text-sm font-normal text-gray-600",
+                            pathName.includes("/component/ping") && "font-semibold text-gray-800"
+                        )}>Ping</span>
+                    </Link>
+                </li>
                 <li>
                     <Link href="/component/progress"
                           className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">

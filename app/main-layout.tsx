@@ -35,7 +35,7 @@ export default function MainLayout({
             </header>
 
             <div className="flex-1 flex overflow-hidden">
-                <aside className="hidden lg:flex lg:flex-shrink-0">
+                <aside className="hidden lg:flex lg:flex-shrink-0 overflow-y-auto max-h-screen">
                     <div className="w-64 flex flex-col">
                         <div
                             className="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white dark:bg-neutral-800 dark:border-neutral-700">
@@ -44,7 +44,7 @@ export default function MainLayout({
                     </div>
                 </aside>
 
-                <main className="flex-1 overflow-auto bg-gray-50 dark:bg-neutral-900">
+                <main className="flex-1 overflow-auto bg-gray-50 dark:bg-neutral-900 max-h-screen">
                     {children}
                 </main>
             </div>

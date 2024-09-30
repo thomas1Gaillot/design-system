@@ -19,6 +19,15 @@ export default function SidebarContent() {
             <nav className="my-6">
                 <ul className="space-y-1 px-3">
                     <li>
+                        <Link href="/"
+                              className={cn("flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50")}>
+                            <span
+                                className={cn("text-sm text-primary",
+                                    pathName === '/' ? 'text-primary  font-semibold' : 'text-gray-700 font-medium')}>
+                                Home</span>
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/component/button"
                               className={cn("flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50")}>
                             <div className={"p-1 rounded-lg border border-gray-200 shadow"}>

@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { CheckIcon } from 'lucide-react';
+import Ping from "@/components/ui/ping";
 
 export interface TimelineStepType {
     title: string;
@@ -20,30 +21,7 @@ export default function TimelineStep({ step, index }: { step: TimelineStepType; 
     return (
         <div key={index} className={cn('flex h-max')}>
             <div className={'flex flex-col  mt-1 items-center mr-4'}>
-                {step.ping || prerequisTodo ? (
-                    <div
-                        className={cn(
-                            'w-4 h-4 min-h-4 bg-indigo-700 rounded-full mb-2',
-                            prerequisTodo && 'bg-amber-400 w-4 h-4 min-h-4',
-                        )}
-                    >
-                        <div
-                            className={cn(
-                                'animate-ping  rounded-full mb-2',
-                                step.ping && 'visible bg-indigo-700 w-4 h-4 min-h-4 ',
-                                prerequisTodo && 'bg-amber-400  w-4 h-4 min-h-4',
-                                !step.ping && 'hidden',
-                            )}
-                        ></div>
-                    </div>
-                ) : (
-                    <div
-                        className={cn(
-                            ' opacity-60 w-3 h-3 min-w-3 min-h-3 bg-gray-500 rounded-full',
-                            step.active && 'bg-indigo-700',
-                        )}
-                    ></div>
-                )}
+                {<Ping pingActive={step.ping} isActive={!!step.active} hasPrerequisite={prerequisTodo}/>}
                 <div className="h-full w-0.5 bg-gray-200  mt-2"></div>
             </div>
             <div className={' pb-6'}>
