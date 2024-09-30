@@ -39,8 +39,8 @@ export default function Page() {
             <h2 className="text-sm font-semibold text-blue-600 mb-2">Composants</h2>
             <h1 className="text-3xl font-bold mb-4">Ping</h1>
             <p className="text-gray-600 mb-8">
-                Le composant <code>Ping</code> est utilisé pour signaler visuellement un état, tel qu'une activité en cours ou
-                des prérequis manquants, via un cercle animé ou un changement de couleur.
+                Le
+                composant <code>Ping</code> {" est utilisé pour signaler visuellement un état, tel qu'une activité en cours ou des prérequis manquants, via un cercle animé ou un changement de couleur."}
             </p>
 
             {/* Exemple de présentation du composant Ping */}
@@ -70,14 +70,13 @@ export default function Page() {
                         Le composant <code>Ping</code> prend trois propriétés principales :
                         <ul className="list-disc ml-6 mt-2">
                             <li>
-                                <strong>pingActive</strong> : Si vrai, un cercle animé "ping" sera affiché pour indiquer une activité.
+                                <strong>pingActive</strong>{': Si vrai, un cercle animé "ping" sera affiché pour indiquer une activité.'}
                             </li>
                             <li>
-                                <strong>isActive</strong> : Indique si l'élément est actif, affectant sa couleur.
+                                <strong>isActive</strong> : {"Indique si l'élément est actif, affectant sa couleur."}
                             </li>
                             <li>
-                                <strong>hasPrerequisite</strong> : Si vrai, le cercle devient jaune pour signaler qu'il y a des
-                                prérequis manquants ou nécessaires.
+                                <strong>hasPrerequisite</strong> {": Si vrai, le cercle devient jaune pour signaler qu'il y a des prérequis manquants ou nécessaires."}
                             </li>
                         </ul>
                     </p>
