@@ -12,18 +12,6 @@ const alertCode = fs.readFileSync(filePath, 'utf-8');
 
 const installAccordionSteps: TimelineStepType[] = [
     {
-        title: "Installer les dépendances",
-        description: "Installez les packages nécessaires en utilisant npm ou pnpm.",
-        Button: () => (
-            <pre className="language-html text-sm p-4 rounded-lg bg-gray-800 text-gray-50 ">
-        <code>{"pnpm i @radix-ui/react-accordion"}</code>
-      </pre>
-        ),
-        ping: false,
-        active: true,
-        prerequisites: [],
-    },
-    {
         title: "Copiez et collez le code suivant dans votre projet.",
         description: "Créez un fichier Accordion.tsx dans votre dossier de composants.",
         Button: () => (
