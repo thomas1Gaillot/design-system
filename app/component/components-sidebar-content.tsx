@@ -5,7 +5,7 @@ import {
     ContainerIcon,
     ImageIcon,
     ListCollapseIcon,
-    LoaderCircle, MessageSquare,
+    LoaderCircle, MegaphoneIcon, MessageSquare,
     PlayIcon,
     TypeOutlineIcon
 } from 'lucide-react'
@@ -83,25 +83,34 @@ export default function ComponentsSideBarContent() {
                 <li className="mt-4">
                     <span className="text-xs font-semibold text-gray-500 uppercase">Base Components</span>
                 </li>
+                {/*<li>*/}
+                {/*    <Link href="/component/accordion"*/}
+                {/*          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">*/}
+                {/*        <ListCollapseIcon className="h-4 w-4 text-green-500"/>*/}
+                {/*        <span className={cn("text-sm font-normal text-gray-600",*/}
+                {/*            pathName.includes("/component/accordion") && "font-semibold text-gray-800"*/}
+                {/*        )}>Accordion</span>*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
                 <li>
-                    <Link href="/component/accordion"
+                    <Link href="/component/alert"
                           className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
-                        <ListCollapseIcon className="h-4 w-4 text-green-500"/>
+                        <MegaphoneIcon className="h-4 w-4 text-green-500"/>
                         <span className={cn("text-sm font-normal text-gray-600",
-                            pathName.includes("/component/accordion") && "font-semibold text-gray-800"
-                        )}>Accordion</span>
+                            pathName.includes("/component/alert") && "font-semibold text-gray-800"
+                        )}>Alert</span>
                     </Link>
                 </li>
 
-                <li>
-                    <Link href="/component/badge"
-                          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
-                        <BadgeIcon className="h-4 w-4 text-green-500"/>
-                        <span className={cn("text-sm font-normal text-gray-600",
-                            pathName.includes("/component/badge") && "font-semibold text-gray-800"
-                        )}>Badge</span>
-                    </Link>
-                </li>
+                {/*<li>*/}
+                {/*    <Link href="/component/badge"*/}
+                {/*          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">*/}
+                {/*        <BadgeIcon className="h-4 w-4 text-green-500"/>*/}
+                {/*        <span className={cn("text-sm font-normal text-gray-600",*/}
+                {/*            pathName.includes("/component/badge") && "font-semibold text-gray-800"*/}
+                {/*        )}>Badge</span>*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
                 <li>
                     <Link href="/component/button"
                           className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
@@ -120,15 +129,15 @@ export default function ComponentsSideBarContent() {
                         )}>Dialog</span>
                     </Link>
                 </li>
-                <li>
-                    <Link href="/component/input-otp"
-                          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
-                        <BinaryIcon className="h-4 w-4 text-green-500"/>
-                        <span className={cn("text-sm font-normal text-gray-600",
-                            pathName.includes("/component/input-otp") && "font-semibold text-gray-800"
-                        )}>Input OTP</span>
-                    </Link>
-                </li>
+                {/*<li>*/}
+                {/*    <Link href="/component/input-otp"*/}
+                {/*          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">*/}
+                {/*        <BinaryIcon className="h-4 w-4 text-green-500"/>*/}
+                {/*        <span className={cn("text-sm font-normal text-gray-600",*/}
+                {/*            pathName.includes("/component/input-otp") && "font-semibold text-gray-800"*/}
+                {/*        )}>Input OTP</span>*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
                 <li>
                     <Link href="/component/ping"
                           className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
@@ -138,15 +147,15 @@ export default function ComponentsSideBarContent() {
                         )}>Ping</span>
                     </Link>
                 </li>
-                <li>
-                    <Link href="/component/progress"
-                          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
-                        <LoaderCircle className="h-4 w-4 text-green-500"/>
-                        <span className={cn("text-sm font-normal text-gray-600",
-                            pathName.includes("/component/progress") && "font-semibold text-gray-800"
-                        )}>Progress</span>
-                    </Link>
-                </li>
+                {/*<li>*/}
+                {/*    <Link href="/component/progress"*/}
+                {/*          className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">*/}
+                {/*        <LoaderCircle className="h-4 w-4 text-green-500"/>*/}
+                {/*        <span className={cn("text-sm font-normal text-gray-600",*/}
+                {/*            pathName.includes("/component/progress") && "font-semibold text-gray-800"*/}
+                {/*        )}>Progress</span>*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
 
             </ul>
         </nav>
