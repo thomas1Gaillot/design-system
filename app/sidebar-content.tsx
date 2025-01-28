@@ -52,14 +52,14 @@ Composition</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/example" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
+                        <Link href="/pages" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50">
                             <div className={"p-1 rounded-lg border border-gray-200 shadow"}>
                                 <LayoutTemplate className="size-4 text-orange-500"/>
                             </div>
                             <span
                                 className={cn("text-sm text-primary",
-                                    pathName.startsWith('/example') ? 'text-orange/500  font-semibold' : 'text-gray-700 font-medium')}>
-Example</span>
+                                    pathName.startsWith('/pages') ? 'text-orange/500  font-semibold' : 'text-gray-700 font-medium')}>
+Pages</span>
                         </Link>
                     </li>
                 </ul>

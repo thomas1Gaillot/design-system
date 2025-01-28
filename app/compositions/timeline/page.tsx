@@ -12,6 +12,7 @@ const timelineSteps: TimelineStepType[] = [
         description: "Cette étape est active et en cours. Elle comporte un bouton actif sans prérequis.",
         Button: ({ disabled }: { disabled: boolean }) => (
             <Button
+                dataId={'button-id'}
                 disabled={disabled}
                 variant="outline"
                 className="mt-2 mb-6"
@@ -31,6 +32,7 @@ const timelineSteps: TimelineStepType[] = [
         description: "Cette étape est en attente. Aucune action n'est requise pour le moment.",
         Button: ({ disabled }: { disabled: boolean }) => (
             <Button
+                dataId={'button-id'}
                 disabled={disabled}
                 variant="outline"
                 className="mt-2 mb-6"
@@ -54,6 +56,7 @@ const timelineSteps: TimelineStepType[] = [
         ],
         Button: ({ disabled }: { disabled: boolean }) => (
             <Button
+                dataId={'button-id'}
                 disabled={disabled}
                 variant="outline"
                 className="mt-2 mb-6"
@@ -72,6 +75,7 @@ const timelineSteps: TimelineStepType[] = [
         description: "Les documents ont été envoyés et sont en attente de signature.",
         Button: ({ disabled }: { disabled: boolean }) => (
             <Button
+                dataId={'button-id'}
                 disabled={disabled}
                 variant="outline"
                 className="mt-2 mb-6"
@@ -112,6 +116,7 @@ export default function Page() {
         description: "Cette étape est active et en cours. Elle comporte un bouton actif sans prérequis.",
         Button: ({ disabled }: { disabled: boolean }) => (
             <Button
+            dataId="button-id"
                 disabled={disabled}
                 variant="outline"
                 className="mt-2 mb-6"

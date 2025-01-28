@@ -10,7 +10,7 @@ export default function Page() {
         <h2 className="text-sm font-semibold text-blue-600 mb-2">Installation</h2>
         <h1 className="text-3xl font-bold mb-4">Installation based on shadcn/ui</h1>
         <p className="text-gray-600 mb-8">
-            Follow <Button onClick={openShadcnInNewTab}
+            Follow <Button dataId={'installation-btn'} onClick={openShadcnInNewTab}
                            variant={'link'}>https://ui.shadcn.com/docs/installation/next</Button>
             tutorial
         </p>

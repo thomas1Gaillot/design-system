@@ -31,7 +31,7 @@ const Section = ({title, description, previewContent, htmlContent}: SectionProps
                     <pre className="language-html text-sm p-4 rounded-lg bg-gray-800 text-gray-50">
                         <code>{html}</code>
                     </pre>
-                    <Button size="icon" variant="ghost" className="absolute top-2 right-2 bg-gray-800 text-gray-50">
+                    <Button dataId={'copy-btn'} size="icon" variant="ghost" className="absolute top-2 right-2 bg-gray-800 text-gray-50">
                         <Copy className="h-4 w-4"/>
                     </Button>
                 </TabsContent>)}

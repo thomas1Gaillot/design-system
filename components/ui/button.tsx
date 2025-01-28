@@ -1,65 +1,74 @@
-import * as React from "react"
-import {Slot} from "@radix-ui/react-slot"
-import {cva, type VariantProps} from "class-variance-authority"
-
-import {cn} from "@/lib/utils"
-import {LoaderCircleIcon} from "lucide-react";
+import * as React from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { cva, type VariantProps } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-    "transition-transform duration-300 transform hover:scale-105 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+    'inline-flex items-center w-fit justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
     {
         variants: {
             variant: {
-                default:
-                    "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-                destructive:
-                    "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-                outline:
-                    "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
-                secondary:
-                    "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-                ghost: "hover:bg-accent hover:text-accent-foreground hover:scale-100",
-                link: "text-primary underline-offset-4 hover:underline",
+                destructive: 'bg-destructive/70 text-destructive-foreground hover:bg-destructive',
+                secondary: 'bg-gray-100 text-secondary-foreground hover:bg-gray-200',
+                ghost: 'hover:text-gray-500 hover:bg-gray-50 border-none',
+                link: 'text-primary underline-offset-4 hover:underline',
+                primary: 'bg-emerald-600 text-white hover:bg-emerald-700',
+                primaryProject: 'bg-indigo-600 text-white hover:bg-indigo-700',
+                outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+                elegible: 'bg-emerald-500 text-white hover:bg-emerald-600',
             },
             size: {
-                default: "h-9 px-4 py-2",
-                sm: "h-8 rounded-md px-3 text-xs",
-                lg: "h-10 rounded-md px-8 py-3",
-                icon: "h-9 w-9",
-            }
+                default: 'h-10 px-4 py-2',
+                sm: 'h-9 px-3 text-sm',
+                lg: 'h-11 px-8 text-lg',
+                xl: 'h-14 px-8 text-2xl',
+                icon: 'h-10 w-10',
+            },
         },
         defaultVariants: {
-            variant: "default",
-            size: "default",
+            variant: 'primaryProject',
+            size: 'default',
         },
-    }
-)
+    },
+);
 
 export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement>,
         VariantProps<typeof buttonVariants> {
-    asChild?: boolean
-    loading?: boolean
+    asChild?: boolean;
+    loading?: boolean;
+    dataId: string;
+    disabled?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({className, variant, size, loading, asChild = false, ...props}, ref) => {
-        const Comp = asChild ? Slot : "button"
+    ({ className, variant, size, loading, disabled, dataId, asChild = false, ...props }, ref) => {
+        const Comp = asChild ? Slot : 'button';
         return (
             <Comp
-                className={cn(buttonVariants({variant, size, className}))}
+                data-id={dataId}
+                className={cn(
+                    buttonVariants({ variant, size, className }),
+                    loading && 'bg-gray-300 text-gray-500 hover:bg-gray-300 cursor-not-allowed',
+                    disabled && 'cursor-not-allowed bg-gray-300 text-gray-500 hover:bg-gray-300 opacity-60',
+                )}
+                disabled={disabled || loading}
                 ref={ref}
                 {...props}
             >
-                {loading ? <>
-                        {"Loading..."}
-                        <LoaderCircleIcon className={"size-5 animate-spin ml-2"}/>
+                {loading ? (
+                    <>
+            <span className="visually-hidden flex  px-8 gap-4 items-center">
+              {'Chargement...'}
+            </span>
                     </>
-                    : props.children}
+                ) : (
+                    props.children
+                )}
             </Comp>
-        )
-    }
-)
-Button.displayName = "Button"
+        );
+    },
+);
+Button.displayName = 'Button';
 
-export {Button, buttonVariants}
+export { Button, buttonVariants };

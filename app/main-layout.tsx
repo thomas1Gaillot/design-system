@@ -22,7 +22,7 @@ export default function MainLayout({
                 <div className="flex items-center justify-between h-16">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="lg:hidden">
+                            <Button dataId={'toggle-navigation-btn'} variant="ghost" size="icon" className="lg:hidden">
                                 <PanelRightClose className="h-6 w-6"/>
                                 <span className="sr-only">Toggle navigation menu</span>
                             </Button>
