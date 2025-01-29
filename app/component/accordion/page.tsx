@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Timeline from "@/compositions/Timeline";
 import { TimelineStepType } from "@/compositions/TimelineStep";
 
@@ -96,7 +96,7 @@ export default function Page() {
             <p className="text-gray-600 mb-8">
                 Accordion components are useful to toggle visibility of content.
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Overview usage"
                 previewContent={
                     <Accordion type="single" collapsible>

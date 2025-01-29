@@ -1,10 +1,6 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {Inter} from "next/font/google";
-import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
-import {Button} from "@/components/ui/button";
-import {PanelRightClose} from "lucide-react";
-import SidebarContent from "@/app/sidebar-content";
 import MainLayout from "@/app/main-layout";
 
 

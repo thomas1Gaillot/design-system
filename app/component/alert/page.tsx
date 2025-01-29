@@ -1,10 +1,10 @@
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Timeline from "@/compositions/Timeline";
 import {TimelineStepType} from "@/compositions/TimelineStep";
 import path from "path";
 import fs from "fs";
 import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
-import {BadgeInfo, BanIcon, BatteryWarningIcon, ExternalLink, PackagePlus, RefreshCcw, XIcon} from "lucide-react";
+import {BadgeInfo, BanIcon, BatteryWarningIcon, PackagePlus, PenIcon, RefreshCcw, XIcon} from "lucide-react";
 import {Button} from "@/components/ui/button";
 
 const filePath = path.resolve(process.cwd(), 'components/ui/alert.tsx');
@@ -30,13 +30,13 @@ const installAccordionSteps: TimelineStepType[] = [
 
 export default function Page() {
     return (
-        <div className="container mx-auto px-4 py-8">
+        <>
             <h2 className="text-sm font-semibold text-blue-600 mb-2">Composants</h2>
             <h1 className="text-3xl font-bold mb-4">Alerte</h1>
             <p className="text-gray-600 mb-8">
                 {"Les composants d'alerte sont utilisés pour informer les utilisateurs d'une action ou d'un événement."}
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Aperçu de l'utilisation"
                 previewContent={
                     <Alert className="mx-4">
@@ -70,12 +70,27 @@ export default function Page() {
                     footerTitle={"<Alert /> est prêt à l'emploi"}
                 />
             </section>
-            <Section
+            <SectionWithHtmlCode
                 title="Variantes et cas d'usage"
                 description="Alerte d'erreur, d'information, d'avertissement, customisé."
                 previewContent={
                     <div className="flex flex-wrap items-center gap-4">
-                        <Alert className="mx-4 bg-indigo-100 text-indigo-700">
+                        <Alert className="mx-4">
+                            <AlertTitle className=" w-full flex gap-4 items-center">
+                                <div className={'bg-gray-200 p-3 rounded'}>
+                                    <PenIcon className={'size-6'}/>
+                                </div>
+                                <p className={'w-full'}>Finalisez la création de votre projet en éditant les
+                                    informations de signataires.</p>
+                                <Button dataId={'more-button'} className={'w-max bg-gray-200'} size='sm'
+                                        variant={'ghost'}>
+                                    <PenIcon className={'size-4 mr-2'}/>
+                                    Compléter
+                                </Button>
+
+                            </AlertTitle>
+                        </Alert>
+                        <Alert className="mx-4 border-l-4 border-l-indigo-700 bg-indigo-100 text-indigo-700">
                             <AlertTitle className=" w-full">
                                 <div className={'flex w-full justify-between items-center'}>
                                     <div className={'flex text-lg'}>
@@ -97,9 +112,11 @@ export default function Page() {
                             <AlertTitle className="flex gap-2 items-center"> <BanIcon
                                 className={'size-4'}/> Erreur</AlertTitle>
                             <AlertDescription className={"w-full"}>
-                                <div className={"flex-col gap-2 flex sm:flex-row w-full justify-between items-start sm:items-center"}>
+                                <div
+                                    className={"flex-col gap-2 flex sm:flex-row w-full justify-between items-start sm:items-center"}>
                                     {"Une erreur s'est produite."}
-                                    <Button dataId={"resolve"} variant={'ghost'} className={'hover:bg-red-200 hover:text-red-700 w-full sm:w-max'}>
+                                    <Button dataId={"resolve"} variant={'ghost'}
+                                            className={'hover:bg-red-200 hover:text-red-700 w-full sm:w-max'}>
                                         Recharger la page <RefreshCcw className={'size-4 ml-2'}/>
                                     </Button>
                                 </div>
@@ -125,7 +142,24 @@ export default function Page() {
                     </div>
                 }
                 htmlContent={`<div className="flex flex-wrap items-center gap-4">
+// ----- Alerte customisée ---------
+ <Alert className="mx-4">
+                            <AlertTitle className=" w-full flex gap-4 items-center">
+                                <div className={'bg-gray-200 p-3 rounded'}>
+                                    <PenIcon className={'size-6'}/>
+                                </div>
+                                <p className={'w-full'}>Finalisez la création de votre projet en éditant les
+                                    informations de signataires.</p>
+                                <Button dataId={'more-button'} className={'w-max bg-gray-200'} size='sm'
+                                        variant={'ghost'}>
+                                    <PenIcon className={'size-4 mr-2'}/>
+                                    Compléter
+                                </Button>
 
+                            </AlertTitle>
+                        </Alert>
+                       
+                        
 // ----- Alerte customisée ---------
   <Alert className="mx-4 bg-indigo-100 text-indigo-700">
                             <AlertTitle className=" w-full">
@@ -182,6 +216,6 @@ export default function Page() {
                         </Alert>
                     </div>`}
             />
-        </div>
+        </>
     );
 }

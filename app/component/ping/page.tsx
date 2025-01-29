@@ -1,4 +1,4 @@
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Ping from "@/components/ui/ping";
 
 // Exemple de données pour différentes configurations du composant Ping
@@ -45,7 +45,7 @@ export default function Page() {
 
             {/* Exemple de présentation du composant Ping */}
             {pingExamples.map((example, index) => (
-                <Section
+                <SectionWithHtmlCode
                     key={index}
                     title={example.title}
                     description={example.description}
@@ -62,7 +62,7 @@ export default function Page() {
                 />
             ))}
 
-            <Section
+            <SectionWithHtmlCode
                 title="Explication du Composant"
                 description="Voici une explication détaillée sur le fonctionnement du composant Ping."
                 previewContent={

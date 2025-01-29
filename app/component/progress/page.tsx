@@ -1,5 +1,5 @@
 import {Progress} from "@/components/ui/progress";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Timeline from "@/compositions/Timeline";
 import {TimelineStepType} from "@/compositions/TimelineStep";
 
@@ -85,7 +85,7 @@ export default function Page() {
             <p className="text-gray-600 mb-8">
                 Progress bars are helpful for showing completion of a task or a percentage of progress.
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Overview usage"
                 previewContent={
                     <Progress value={50} label="50%" labelLeft="Progress:"/>
@@ -103,7 +103,7 @@ export default function Page() {
                 />
             </section>
 
-            <Section
+            <SectionWithHtmlCode
                 title="Variants"
                 description="The progress component supports customizable labels and sizes."
                 previewContent={

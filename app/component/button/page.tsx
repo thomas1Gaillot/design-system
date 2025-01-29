@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import { PlusIcon, ThumbsDownIcon } from "lucide-react";
 import { ButtonIcon } from "@radix-ui/react-icons";
 import Timeline from "@/compositions/Timeline";
@@ -41,7 +41,7 @@ export default function Page() {
             <p className="text-gray-600 mb-8">
                 Parcourez et personnalisez de magnifiques boutons Tailwind CSS avec différents styles, états et tailles. Trouvez des exemples actifs, désactivés, avec icônes, et bien plus encore.
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Aperçu de l'utilisation"
                 previewContent={
                     <>
@@ -79,7 +79,7 @@ export default function Page() {
                           footerTitle={`<Button /> est prêt à l'emploi`} />
                               </section>
 
-                              <Section
+                              <SectionWithHtmlCode
                               title="Variantes"
                               description="Explorez les styles de boutons les plus courants tels que plein, contour, fantôme, doux, lien, et plus encore."
                               previewContent={
@@ -96,7 +96,7 @@ export default function Page() {
              htmlContent={`<Button>Plein</Button>\n<Button variant="outline">Contour</Button>\n<Button variant="ghost">Fantôme</Button>\n<Button variant="secondary">Doux</Button>\n<Button variant="secondary" className="bg-white">Blanc</Button>\n<Button variant="link">Lien</Button>\n<Button disabled={true}>Désactivé</Button>`}
         />
 
-    <Section
+    <SectionWithHtmlCode
         title="Tailles"
         description="Boutons classés par taille, du plus petit au plus grand."
         previewContent={

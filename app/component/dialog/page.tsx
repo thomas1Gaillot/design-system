@@ -8,7 +8,7 @@ import {
     DialogTitle,
     DialogTrigger
 } from "@/components/ui/dialog";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Timeline from "@/compositions/Timeline";
 import {TimelineStepType} from "@/compositions/TimelineStep";
 
@@ -172,7 +172,7 @@ export default function Page() {
             <p className="text-gray-600 mb-8">
                 Dialog components allow you to present modal dialogues with custom content and interactions.
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Overview usage"
                 previewContent={
                     <Dialog>

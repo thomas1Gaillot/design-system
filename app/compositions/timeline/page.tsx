@@ -1,6 +1,6 @@
 'use client'
 import {Button} from "@/components/ui/button";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import {ScrollTextIcon, UserSquareIcon} from "lucide-react";
 import {TimelineStepType} from "@/compositions/TimelineStep";
 import Timeline from "@/compositions/Timeline";
@@ -101,7 +101,7 @@ export default function Page() {
                 disabled, pill, icon, and other free button examples.
             </p>
 
-            <Section
+            <SectionWithHtmlCode
                 title="Variants"
                 description="Explore the most commonly used button styles such as solid, outline, ghost, soft, link, and more."
                 previewContent={

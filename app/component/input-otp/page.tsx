@@ -1,5 +1,5 @@
 import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@/components/ui/input-otp";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Timeline from "@/compositions/Timeline";
 import { TimelineStepType } from "@/compositions/TimelineStep";
 
@@ -110,7 +110,7 @@ export default function Page() {
             <p className="text-gray-600 mb-8">
                 InputOTP components allow for creating a structured One-Time Password (OTP) input.
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Overview usage"
                 previewContent={
                 <InputOTP maxLength={6}>
@@ -148,7 +148,7 @@ export default function Page() {
                 />
             </section>
 
-            <Section
+            <SectionWithHtmlCode
                 title="Variants"
                 description="The Input OTP component allows for different layouts and separators."
                 previewContent={

@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import Section from "@/app/component/section";
+import SectionWithHtmlCode from "@/app/component/section-with-html-code";
 import Timeline from "@/compositions/Timeline";
 import { TimelineStepType } from "@/compositions/TimelineStep";
 
@@ -65,7 +65,7 @@ export default function Page() {
                 Badges are small, simple UI elements that indicate the status, category,
                 or information about an element.
             </p>
-            <Section
+            <SectionWithHtmlCode
                 title="Overview usage"
                 previewContent={
                     <>
@@ -87,7 +87,7 @@ export default function Page() {
                 />
             </section>
 
-            <Section
+            <SectionWithHtmlCode
                 title="Variants"
                 description="Explore different badge styles such as default, secondary, destructive, and outline."
                 previewContent={
@@ -101,7 +101,7 @@ export default function Page() {
                 htmlContent={`<Badge>Default</Badge>\n<Badge variant="secondary">Secondary</Badge>\n<Badge variant="destructive">Destructive</Badge>\n<Badge variant="outline">Outline</Badge>`}
             />
 
-            <Section
+            <SectionWithHtmlCode
                 title="Interactive States"
                 description="Badges with hover effects to indicate interactivity."
                 previewContent={

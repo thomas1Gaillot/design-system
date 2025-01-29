@@ -10,7 +10,7 @@ interface SectionProps {
     htmlContent: string | string[];
 }
 
-const Section = ({title, description, previewContent, htmlContent}: SectionProps) => {
+const SectionWithHtmlCode = ({title, description, previewContent, htmlContent}: SectionProps) => {
     const htmlContents = typeof htmlContent === 'string' ? [htmlContent] : htmlContent;
     return (
         <section className="mb-8">
@@ -40,4 +40,4 @@ const Section = ({title, description, previewContent, htmlContent}: SectionProps
     );
 };
 
-export default Section;
+export default SectionWithHtmlCode;
