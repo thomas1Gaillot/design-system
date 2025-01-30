@@ -37,7 +37,7 @@ export default function Component() {
                             onClick={() => router.push("/guidelines")}
                             className="w-full bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600"
                         >
-                            Guide UX
+                            Conception UX
                             <ChevronRight className="size-4 shrink-0 ml-2"/>
                         </Button>
                     </div>

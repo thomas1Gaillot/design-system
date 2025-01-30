@@ -8,7 +8,7 @@ import {AnimatePresence, motion} from "framer-motion"
 import {Button} from "@/components/ui/button";
 
 export default function BrandPage() {
-    const [expandedSection, setExpandedSection] = useState<string | null>("vision")
+    const [expandedSection, setExpandedSection] = useState<string | null>(null)
 
     const brandSections = [
         {

@@ -9,6 +9,7 @@ import {cn} from "@/lib/utils"
 import CompositionSidebarContent from "@/app/component/composition-sidebar-content"
 import {useState} from "react"
 import {AnimatePresence, motion} from "framer-motion"
+import GuidelinesSidebarContent from "@/app/component/guidelines-sidebar-content";
 
 export default function SidebarContent() {
     const pathName = usePathname()
@@ -29,7 +30,7 @@ export default function SidebarContent() {
                 {
                     href: "/guidelines",
                     icon: <FlaskConical className="size-4 text-amber-500" />,
-                    label: "Guide UX",
+                    label: "Conception UX",
                 },
             ],
         },
@@ -152,6 +153,7 @@ export default function SidebarContent() {
             <Separator orientation={"horizontal"} />
             {pathName.startsWith("/component") && <ComponentsSideBarContent />}
             {pathName.startsWith("/compositions") && <CompositionSidebarContent />}
+            {pathName.startsWith("/guidelines") && <GuidelinesSidebarContent />}
         </div>
     )
 }

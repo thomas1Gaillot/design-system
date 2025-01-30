@@ -1,20 +1,11 @@
 import Link from 'next/link'
-import {
-    BadgeIcon, BellIcon, BinaryIcon,
-    BookTypeIcon,
-    ContainerIcon,
-    ImageIcon,
-    ListCollapseIcon,
-    LoaderCircle, MegaphoneIcon, MessageSquare,
-    PlayIcon,
-    TypeOutlineIcon
-} from 'lucide-react'
+import {BellIcon, ContainerIcon, MegaphoneIcon, MessageSquare, PlayIcon} from 'lucide-react'
 import {ButtonIcon} from "@radix-ui/react-icons";
 import {cn} from "@/lib/utils";
 import {usePathname} from "next/navigation";
 
 export default function ComponentsSideBarContent() {
-    const pathName=usePathname()
+    const pathName = usePathname()
     return (
         <nav className="mt-6 ml-2">
             <ul className="space-y-1 px-3">

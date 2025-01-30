@@ -19,7 +19,7 @@ export function ModalDialog() {
   return (
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-          {"Exemples d'utilisation des Modales"}
+          {"Modale"}
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
           {"Les modales sont parfaites pour attirer l'attention de l'utilisateur sur des actions à court termes."}

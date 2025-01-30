@@ -5,6 +5,7 @@ import {Button} from "@/components/ui/button"
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
 import SidebarContent from "@/app/sidebar-content";
 import CommentDialog from "@/compositions/CommentDialog";
+import Breadcrumbs from "@/compositions/breadcrumbs";
 
 
 
@@ -46,7 +47,11 @@ export default function MainLayout({
                 </aside>
 
                 <main className="flex-1 overflow-auto bg-gray-50 dark:bg-neutral-900 max-h-screen">
-                    <div className="max-w-[85rem] mx-auto px-16 sm:px-24 lg:px-32 py-16 pb-20 space-y-8">
+
+                    <div className="max-w-[85rem] mx-auto px-8 sm:px-24 lg:px-32 py-8 sm:py-16 pb-20 space-y-8">
+                        <div className={"w-full"}>
+                            <Breadcrumbs/>
+                        </div>
                         {children}
                     </div>
                     <CommentDialog/>
