@@ -10,7 +10,7 @@ import { Download, ExternalLink, Settings, Star, Sun, TrendingUp, Users, Zap } f
 import { useState } from "react"
 
 export default function SolarLandingPage() {
-  const [iframeUrl, setIframeUrl] = useState("https://pre-prod.monenergiecollective.fr/user-portfolio-widget?primary=ec4899&widget_user_id=a6475072-e660-496c-88df-0961018b63e8")
+  const [iframeUrl, setIframeUrl] = useState("https://pre-prod.monenergiecollective.fr/user-portfolio-widget?primary=fd9a00&widget_user_id=a6475072-e660-496c-88df-0961018b63e8")
   const [tempUrl, setTempUrl] = useState(iframeUrl)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
