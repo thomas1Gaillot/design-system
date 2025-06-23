@@ -171,11 +171,11 @@ export default function SolarLandingPage() {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Configurer l'URL de l'iframe</DialogTitle>
+                  <DialogTitle>{"Configurer l'URL de l'iframe"}</DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="iframe-url">URL à afficher</Label>
+                    <Label htmlFor="iframe-url">{"URL à afficher"}</Label>
                     <Input
                       id="iframe-url"
                       value={tempUrl}
@@ -212,7 +212,7 @@ export default function SolarLandingPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pourquoi choisir SolarShare ?</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Notre plateforme révolutionne l'autoconsommation collective avec des technologies de pointe
+            {"Notre plateforme révolutionne l'autoconsommation collective avec des technologies de pointe"}
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export default function SolarLandingPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Production Optimisée</h3>
               <p className="text-gray-600">
-                Maximisez votre production solaire avec nos algorithmes d'optimisation intelligents
+                {"Maximisez votre production solaire avec nos algorithmes d'optimisation intelligents"}
               </p>
             </CardContent>
           </Card>
@@ -235,7 +235,7 @@ export default function SolarLandingPage() {
                 <Users className="h-6 w-6 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Communauté Énergétique</h3>
-              <p className="text-gray-600">Partagez et échangez l'énergie au sein de votre communauté locale</p>
+              <p className="text-gray-600">{"Partagez et échangez l'énergie au sein de votre communauté locale"}</p>
             </CardContent>
           </Card>
 
@@ -246,7 +246,7 @@ export default function SolarLandingPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Économies Garanties</h3>
               <p className="text-gray-600">
-                Réduisez vos factures d'électricité jusqu'à 70% avec notre système intelligent
+                {"Réduisez vos factures d'électricité jusqu'à 70% avec notre système intelligent"}
               </p>
             </CardContent>
           </Card>
@@ -256,8 +256,8 @@ export default function SolarLandingPage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-orange-500 to-red-500 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Prêt à rejoindre la révolution solaire ?</h2>
-          <p className="text-xl mb-8 opacity-90">Commencez votre transition énergétique dès aujourd'hui</p>
+          <h2 className="text-3xl font-bold mb-4">{"Prêt à rejoindre la révolution solaire ?"}</h2>
+          <p className="text-xl mb-8 opacity-90">{"Commencez votre transition énergétique dès aujourd'hui"}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button dataId="connexion" size="lg" variant="secondary">
               Demander un devis gratuit
@@ -283,7 +283,7 @@ export default function SolarLandingPage() {
                 <span className="text-lg font-bold">SolarShare</span>
               </div>
               <p className="text-gray-400">
-                Votre partenaire pour l'autoconsommation collective et la transition énergétique.
+                {"Votre partenaire pour l'autoconsommation collective et la transition énergétique."}
               </p>
             </div>
 
