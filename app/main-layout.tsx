@@ -1,22 +1,26 @@
 'use client'
-import {useState} from 'react'
-import {PanelRightClose} from 'lucide-react'
-import {Button} from "@/components/ui/button"
-import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
-import SidebarContent from "@/app/sidebar-content";
-import CommentDialog from "@/compositions/CommentDialog";
-import Breadcrumbs from "@/compositions/breadcrumbs";
+import SidebarContent from "@/app/sidebar-content"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import CommentDialog from "@/compositions/CommentDialog"
+import Breadcrumbs from "@/compositions/breadcrumbs"
+import { PanelRightClose } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 
 
 
 export default function MainLayout({
-                                       children,
-                                   }: Readonly<{
+    children,
+}: Readonly<{
     children: React.ReactNode;
 }>) {
     const [isOpen, setIsOpen] = useState(false)
-
+    const pathname = usePathname()
+    if (pathname === '/landing-acc') {
+        return <>{children}</>
+    }
     return (
         <div className="min-h-screen flex flex-col">
             <header
@@ -25,12 +29,12 @@ export default function MainLayout({
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <Button dataId={'toggle-navigation-btn'} variant="ghost" size="icon" className="lg:hidden">
-                                <PanelRightClose className="h-6 w-6"/>
+                                <PanelRightClose className="h-6 w-6" />
                                 <span className="sr-only">Toggle navigation menu</span>
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="left" className="w-[300px]  bg-white sm:w-[400px] p-0">
-                            <SidebarContent/>
+                            <SidebarContent />
                         </SheetContent>
                     </Sheet>
                 </div>
@@ -41,7 +45,7 @@ export default function MainLayout({
                     <div className="w-64 flex flex-col">
                         <div
                             className="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white dark:bg-neutral-800 dark:border-neutral-700">
-                            <SidebarContent/>
+                            <SidebarContent />
                         </div>
                     </div>
                 </aside>
@@ -50,11 +54,11 @@ export default function MainLayout({
 
                     <div className="max-w-[85rem] mx-auto px-8 sm:px-24 lg:px-32 py-8 sm:py-16 pb-20 space-y-8">
                         <div className={"w-full"}>
-                            <Breadcrumbs/>
+                            <Breadcrumbs />
                         </div>
                         {children}
                     </div>
-                    <CommentDialog/>
+                    <CommentDialog />
                 </main>
             </div>
         </div>

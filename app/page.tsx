@@ -67,7 +67,7 @@ export default function Component() {
                         </Button>
                         <Button
                             dataId={"pages-exemples"}
-                            onClick={() => router.push("/example")}
+                            onClick={() => router.push("/examples")}
                             className="w-full bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600"
                         >
                             {"Exemples d'UI"}
